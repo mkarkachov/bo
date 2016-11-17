@@ -395,7 +395,7 @@ body{
 		border-left: 1px solid #fff;
 		border-right: 1px solid #fff;
 		.trans;
-		&.is-checked{
+		&.active{
 			color: #fff;
 			background-color: @color_green;
 			border-left-color: @color_green;
@@ -421,6 +421,10 @@ body{
 		border-top: 0;
 		padding: 2.68% 2.68% 2.15%;
 		.trans(.85s);
+		.js &{
+			margin-right: -5px;
+			display: none;
+		}
 		.js &:extend(.animation_hidden){}
 		.js &.animated:extend(.animation_show){}
 		&:hover{
@@ -544,6 +548,7 @@ body{
 	}
 	.js & .text:extend(.animation_hidden){}
 	.js & .animated .text:extend(.animation_show){transition-delay: 1s;}
+	.js & .grid_row{display: inline;}
 	.nojs &{
 		background-color: #fff;
 		display: table;
@@ -1065,6 +1070,7 @@ body{
 	padding: 50px 0;
 	font-weight: 300;
 	font-size: 14px;
+	overflow: hidden;
 	.logo{
 		width: 227px;
 		height: 19px;

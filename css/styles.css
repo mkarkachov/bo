@@ -660,7 +660,7 @@ body{
 	-webkit-transition:all .4s ease;
 	transition:all .4s ease;
 }
-.filters_tabset span.is-checked{
+.filters_tabset span.active{
 	color:#fff;
 	background-color:#0c9;
 	border-left-color:#0c9;
@@ -688,6 +688,10 @@ body{
 	padding:2.68% 2.68% 2.15%;
 	-webkit-transition:all .85s ease;
 	transition:all .85s ease;
+}
+.js .grid .item{
+	margin-right:-5px;
+	display:none;
 }
 .grid .item:hover{
 	background-color:#f6f6f6;
@@ -839,6 +843,9 @@ body{
 .js .grid .animated .text{
 	-webkit-transition-delay:1s;
 	transition-delay:1s;
+}
+.js .grid .grid_row{
+	display:inline;
 }
 .nojs .grid{
 	background-color:#fff;
@@ -1414,6 +1421,7 @@ body{
 	padding:50px 0;
 	font-weight:300;
 	font-size:14px;
+	overflow:hidden;
 }
 #footer .logo{
 	width:227px;
