@@ -401,7 +401,7 @@ body{
 			border-left-color: @color_green;
 			border-right-color: @color_green;
 		}
-		&:not(.is-checked):hover{
+		&:not(.active):hover{
 			background-color: #f6f6f6;
 			border-left-color: #eee;
 			border-right-color: #eee;
@@ -420,13 +420,21 @@ body{
 		border-right: 0;
 		border-top: 0;
 		padding: 2.68% 2.68% 2.15%;
-		.trans(.85s);
+		position: relative;
+		// .trans(.85s);
 		.js &{
 			margin-right: -5px;
 			display: none;
 		}
-		.js &:extend(.animation_hidden){}
-		.js &.animated:extend(.animation_show){}
+		.js &{
+			opacity: 0;
+			top: -100px;
+		}
+		.js &.animated{
+			opacity: 1;
+			top: 0;
+			transition:opacity .3s ease 0s, top .3s ease 0s;
+		}
 		&:hover{
 			background-color: #f6f6f6;
 			.link{color: @linkcolorhover;}

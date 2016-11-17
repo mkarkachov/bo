@@ -296,7 +296,6 @@ body{
 	.js #visual .title,
 	.js #visual h1,
 	.js #visual .text,
-	.js .grid .item,
 	.js .grid .icon,
 	.js .grid .author,
 	.js .grid .title,
@@ -317,7 +316,6 @@ body{
 #visual.animated .title,
 #visual.animated h1,
 #visual.animated .text,
-.js .grid .item.animated,
 .js .grid .animated .icon,
 .js .grid .animated .author,
 .js .grid .animated .title,
@@ -666,7 +664,7 @@ body{
 	border-left-color:#0c9;
 	border-right-color:#0c9;
 }
-.filters_tabset span:not(.is-checked):hover{
+.filters_tabset span:not(.active):hover{
 	background-color:#f6f6f6;
 	border-left-color:#eee;
 	border-right-color:#eee;
@@ -686,12 +684,21 @@ body{
 	border-right:0;
 	border-top:0;
 	padding:2.68% 2.68% 2.15%;
-	-webkit-transition:all .85s ease;
-	transition:all .85s ease;
+	position:relative;
 }
 .js .grid .item{
 	margin-right:-5px;
 	display:none;
+}
+.js .grid .item{
+	opacity:0;
+	top:-100px;
+}
+.js .grid .item.animated{
+	opacity:1;
+	top:0;
+	-webkit-transition:opacity .3s ease 0s, top .3s ease 0s;
+	transition:opacity .3s ease 0s, top .3s ease 0s;
 }
 .grid .item:hover{
 	background-color:#f6f6f6;
