@@ -694,6 +694,12 @@ body{
 	opacity:0;
 	top:-100px;
 }
+@media screen and (max-width: 500px){
+	.js .grid .item{
+		top:0;
+		opacity:1;
+	}
+}
 .js .grid .item.animated{
 	opacity:1;
 	top:0;

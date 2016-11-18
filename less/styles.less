@@ -421,7 +421,6 @@ body{
 		border-top: 0;
 		padding: 2.68% 2.68% 2.15%;
 		position: relative;
-		// .trans(.85s);
 		.js &{
 			margin-right: -5px;
 			display: none;
@@ -429,6 +428,10 @@ body{
 		.js &{
 			opacity: 0;
 			top: -100px;
+			@media screen and (max-width:500px) {
+				top: 0;
+				opacity: 1;
+			}
 		}
 		.js &.animated{
 			opacity: 1;
