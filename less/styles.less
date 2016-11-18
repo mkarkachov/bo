@@ -934,8 +934,8 @@ body{
 			width: 100%;
 			z-index:1;
 		}
-		&.animated .main_holder:extend(.animation_hidden){}
-		&.animated .request_received:extend(.animation_show){}
+		&.animated .main_holder:extend(.animation_hidden){z-index: 1;}
+		&.animated .request_received:extend(.animation_show){z-index: 2;}
 		@media screen and (max-width:500px) {
 			.request_received{
 				display: none;

@@ -1269,6 +1269,12 @@ body{
 	width:100%;
 	z-index:1;
 }
+.request_section #request_form.animated .main_holder{
+	z-index:1;
+}
+.request_section #request_form.animated .request_received{
+	z-index:2;
+}
 @media screen and (max-width: 500px){
 	.request_section #request_form .request_received{
 		display:none;
