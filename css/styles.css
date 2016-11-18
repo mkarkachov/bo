@@ -935,6 +935,7 @@ body{
 .team_list .social_contacts li{
 	width:auto;
 	margin:0 5px;
+	padding:0;
 }
 .team_list .social_contacts a{
 	display:block;
@@ -960,7 +961,7 @@ body{
 	transition-delay:.7s;
 }
 .js .team_list .animated .social_contacts:before{
-	width:80px;
+	width:48px;
 	-webkit-transition:width .8s ease 1.2s;
 	transition:width .8s ease 1.2s;
 }
