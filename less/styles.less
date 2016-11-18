@@ -263,7 +263,7 @@ body{
 		color: @linkcolorhover;
 		padding-right: 80px;
 		margin-bottom: 20px;
-		&:after{
+		&:before{
 			content: '';
 			position: absolute;
 			left: 0;
@@ -352,7 +352,7 @@ body{
 }
 .heading{
 	text-align: center;
-	padding-bottom: 40px;
+	padding-bottom:50px;
 	h2{
 		color: @linkcolorhover;
 		font-size: 60px;
@@ -414,6 +414,9 @@ body{
 	}
 }
 .grid{
+	&#grid_blog_entries{
+		.js & .item{display: inline-block;}
+	}
 	.item{
 		background-color: #fff;
 		width: 25%;
@@ -425,8 +428,6 @@ body{
 		.js &{
 			margin-right: -5px;
 			display: none;
-		}
-		.js &{
 			opacity: 0;
 			top: -100px;
 			@media screen and (max-width:500px) {
@@ -1126,5 +1127,295 @@ body{
 	@media screen and (max-width:414px) {
 		padding-bottom: 30px;
 		ul li{padding-bottom: 10px;}
+	}
+}
+.promo{
+	text-align: center;
+	background:@linkcolorhover url(../images/img1.jpg) no-repeat 50% 50% / cover;
+	padding: 107px 0 130px;
+	min-height: 760px;
+	h1{
+		font-size: 85px;
+		color: #fff;
+		margin: 0 auto;
+		max-width: 1120px;
+		padding: 0 10px;
+	}
+	.meta{
+		font-weight: 400;
+		font-size: 14px;
+		color: #999;
+		li{
+			display: inline-block;
+			margin-right: -4px;
+			&:before{
+				content: '/';
+				margin: 0 8px;
+			}
+			&:first-child:before{display: none;}
+		}
+		.category{color: @color_green;}
+		&:after{
+			content: '';
+			display: block;
+			width: 66px;
+			height: 4px;
+			background-color: @color_green;
+			margin: 20px auto 65px;
+		}
+	}
+}
+.about_author{
+	margin-top: -77px;
+	position: relative;
+	z-index:10;
+	text-align: center;
+	padding-bottom: 50px;
+	.photo:extend(.team_list .photo){
+		img:extend(.fullwidth_img){}
+			margin-bottom: 16px;
+	}
+	.text{
+		padding-bottom: 18px;
+		h4:extend(.team_list h4){}
+		h5:extend(.team_list h5){}
+	}
+}
+.social_contacts_list{
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	line-height: 17px;
+	text-align: center;
+	margin-bottom: 20px;
+	li{
+		display: inline-block;
+		margin-right: -2px;
+	}
+	a{
+		color: @linkcolor;
+		display: block;
+		background-color: #fff;
+		border-bottom: 1px solid #eee;
+		width: 150px;
+		padding: 22px 0;
+		.trans;
+		span{
+			position: relative;
+			padding-left: 16px;
+			display: inline-block;
+			vertical-align: top;
+			&:after{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				background:@sprites -607px -200px;
+			  width: 9px;
+			  height: 17px;
+			}
+		}
+		&:hover{
+			color: #fff;
+			background-color:@color_green;
+			span:after{background-position: -607px -225px;}
+		}
+	}
+	.twitter{
+		span{
+			padding-left: 26px;
+			&:after{
+				background-position: -472px -116px;
+			  width: 18px;
+			  height: 13px;
+				top: 3px;
+			}
+		}
+		&:hover span:after{background-position: -472px -95px;}
+	}
+	.linkedin{
+		span{
+			padding-left: 27px;
+			&:after{
+				background-position: -579px -305px;
+			  width: 18px;
+			  height: 15px;
+				top: -1px;
+			}
+		}
+		&:hover span:after{background-position: -579px -434px;}
+	}
+	.email{
+		span{
+			padding-left: 29px;
+			&:after{
+				background-position: -592px -113px;
+			  width: 22px;
+			  height: 15px;
+				top: 1px;
+			}
+		}
+		&:hover span:after{background-position: -592px -67px;}
+	}
+}
+.blog_content{
+	background-color: #fff;
+	padding: 70px 15px 80px;
+	font:20px/30px @fonts2;
+	margin-bottom: 70px;
+	.inner{
+		max-width: 1064px;
+		margin: 0 auto;
+	}
+	h2{
+		color: #444;
+		font-size: 24px;
+		margin-bottom: 18px;
+	}
+	p{margin-bottom: 30px;}
+	a{color: @color_green;}
+	.text{
+		max-width: 810px;
+		margin: 0 auto;
+	}
+	.page_title{
+		text-align: center;
+		padding-bottom: 22px;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 50px;
+		h3{
+			color: #555;
+			font-size: 36px;
+			font-weight: 300;
+			margin-bottom: 30px;
+		}
+	}
+	.figure{
+		border-bottom: 1px solid #eee;
+		margin-bottom: 55px;
+		.holder{
+			display: block;
+			margin-bottom: 28px;
+		}
+		img:extend(.fullwidth_img){}
+		.caption{
+			text-align: center;
+			color: #999;
+			font:300 15px @fonts;
+			padding-bottom: 25px;
+		}
+	}
+	.list{
+		margin: 0 0 30px 70px;
+		li{
+			position: relative;
+			padding-left: 10px;
+			&:before{
+				content: '\2022';
+				position: absolute;
+				left: 0;
+				top: 0;
+				line-height: normal;
+			}
+		}
+	}
+	.social_contacts_list{
+		font:bold 12px @fonts;
+		a{
+			background-color: @linkcolorhover;
+			border-color:#fff;
+			color: @linkcolor;
+			&:hover{
+				color: #fff;
+				background-color: @color_green;
+			}
+		}
+	}
+}
+.twitter_card{
+	border: 1px solid #e0e0e0;
+	text-align: center;
+	font:300 24px @fonts;
+	color: #555;
+	padding:30px 40px 0;
+	margin-bottom: 60px;
+	p{margin-bottom: 30px;}
+	.tweet_this{
+		background-color:@color_green;
+		text-transform: uppercase;
+		font:bold 14px @fonts;
+		width: 200px;
+		color: #fff;
+		padding:14px 10px;
+		display: block;
+		margin: 0 auto -23px;
+		span{
+			padding-left: 26px;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				left: 0;
+				top:2px;
+				background:@sprites -602px -495px;
+			  width: 18px;
+			  height: 15px;
+			}
+		}
+	}
+}
+.post_footer:extend(.blog_content .text){
+	padding: 90px 0 60px;
+	overflow: hidden;
+	position: relative;
+	&:before{
+		content: '';
+		height: 1px;
+		background-color: #eee;
+		width: 100%;
+		position: absolute;
+		top: 20px;
+		left: 0;
+	}
+}
+.subscribe_form_blog{
+	text-align: center;
+	margin-bottom: 0;
+	background:@linkcolorhover url(../images/bg-pattern.png) repeat;
+	padding: 76px 15px 90px;
+	.label:extend(.subscribe_form label){
+		color: #fff;
+		padding: 0;
+		text-align: center;
+		font-size: 33px;
+		font-weight: 300;
+		margin-bottom: 42px;
+		&:before:extend(.subscribe_form label:before){
+			position: static;
+			display: block;
+			margin: 0 auto 38px;
+		}
+	}
+	.set{
+		max-width: 864px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.field:extend(.request_section .field){
+		float: left;
+		width: 71%;
+		text-align: left;
+		margin: 0;
+		label:extend(.request_section label){}
+		.txt:extend(.request_section .txt){
+			padding: 8px 16px 16px;
+		}
+	}
+	.btn:extend(.request_section .btn){
+		float: right;
+		width: 29%;
+		clear: none;
+		height: 84px;
+		&:hover:extend(.request_section .btn:hover){}
 	}
 }
