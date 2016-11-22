@@ -424,10 +424,12 @@ body{
 #visual .btn{
 	z-index:2;
 	position:relative;
+	color:#0c9;
+	border-color:#0c9;
 }
 #visual .btn:hover{
 	background-color:#0c9;
-	border-color:#0c9;
+	color:#fff;
 }
 #visual.animated .title:after{
 	width:114px;
