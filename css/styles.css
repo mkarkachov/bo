@@ -277,6 +277,7 @@ body{
 	#header .btn{
 		padding-left:10px;
 		padding-right:10px;
+		letter-spacing:2px;
 	}
 }
 @media screen and (max-width: 360px){
@@ -313,7 +314,9 @@ body{
 	.js .providers .list li,
 	.request_section #request_form .request_received,
 	.request_section #request_form.animated .main_holder,
-	.js .brands li{
+	.js .brands li,
+	.js .promo h1,
+	.js .promo .meta{
 		-webkit-transform:translate(0, -50px);
 		transform:translate(0, -50px);
 		opacity:0;
@@ -332,7 +335,9 @@ body{
 .js .team_list .animated .social_contacts,
 .js .providers .list .animated,
 .request_section #request_form.animated .request_received,
-.js .brands .animated{
+.js .brands .animated,
+.promo.animated .meta,
+.promo.animated h1{
 	-webkit-transition:all .8s ease 0s;
 	transition:all .8s ease 0s;
 	-webkit-transform:translate(0, 0);
@@ -1559,10 +1564,22 @@ body{
 .promo .meta:after{
 	content:"";
 	display:block;
-	width:66px;
+	width:0;
 	height:4px;
 	background-color:#0c9;
 	margin:20px auto 65px;
+}
+.nojs .promo .meta:after{
+	width:66px;
+}
+.promo.animated .meta:after{
+	width:66px;
+	-webkit-transition:width .8s ease 1s;
+	transition:width .8s ease 1s;
+}
+.promo.animated h1{
+	-webkit-transition-delay:.8s;
+	transition-delay:.8s;
 }
 @media screen and (max-width: 768px){
 	.promo{

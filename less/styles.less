@@ -80,6 +80,7 @@ body{
 		.btn{
 			padding-left: 10px;
 			padding-right: 10px;
+			letter-spacing: 2px;
 		}
 	}
 	@media screen and (max-width:360px) {
@@ -1147,6 +1148,7 @@ body{
 		margin: 0 auto;
 		max-width: 1120px;
 		padding: 0 10px;
+		.js &:extend(.animation_hidden){}
 	}
 	.meta{
 		font-weight: 400;
@@ -1165,11 +1167,22 @@ body{
 		&:after{
 			content: '';
 			display: block;
-			width: 66px;
+			width: 0;
 			height: 4px;
 			background-color: @color_green;
 			margin: 20px auto 65px;
+			.nojs &{width: 66px;}
 		}
+		.js &:extend(.animation_hidden){}
+	}
+	&.animated{
+		.meta:extend(.animation_show){
+			&:after{
+				width: 66px;
+				transition: width .8s ease 1s;
+			}
+		}
+		h1:extend(.animation_show){transition-delay: 0.8s;}
 	}
 	@media screen and (max-width:768px) {
 		padding-top: 80px;
